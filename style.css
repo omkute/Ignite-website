@@ -1,0 +1,265 @@
+:root{
+    --primery-color: #ffff;
+    --secondery-color: #393E46;
+    --pop-color: #f1f1f1;
+    --text-color: #666565;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primery-color);
+    color: var(--text-color);
+}
+
+.header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    height: 45px;
+    
+    
+}
+.logo{
+    font-weight: 900;
+    letter-spacing:3px;
+    color: var(--text-color);
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+nav ul li a{
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+    text-decoration: none;
+    font-size: large;
+    border-radius: 8px;
+    color: var(--text-color);
+    
+    
+}
+nav{
+    margin-top: 20px;
+    background-color:var(--pop-color);
+    border-radius: 10px;
+}
+nav ul li a:hover{
+    background-color:#ffffff ;
+    color: Black;
+    transition: 0.4s;
+}
+/* Slider Dark mode btn */
+
+/* Navbar button */
+.hamburger{
+    display: none;
+    cursor: pointer;
+
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+}
+@media (max-width:880px){
+    .hamburger{
+        display: block;
+        transition: 0.2s;
+    }
+   .nav ul{
+    background-color: #fdfdfd;
+   }
+   
+   .nav ul li a:hover{
+    color: white;
+    background-color: #666565;
+   }
+
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+/* Risponsiveness */
+@media (max-width: 880px ) {
+    .logo{
+        font-size:20px;
+        transition: 0.5s;
+    }
+    .header-main{
+        background-color: var(--pop-color);
+        height: 50px;
+        align-items: center;
+        padding-bottom: 0.6rem;
+    }
+    nav{
+        transition: 2s;
+        left: 100%;
+        
+        
+        width:50%;
+    }
+    nav ul{
+        background-color: var(--secondery-color);
+        position: fixed;
+        float: right;
+        flex-direction: column;
+        flex-wrap: wrap;
+       
+        width: 50%;
+        height: 100%;
+        margin-top: 40px;
+       
+        text-align: left;
+        right: -100%;
+    
+
+        
+    }
+    .nav-menu.active{
+        right: 0;
+        transition: 0.3s ease-in;
+    }
+    nav ul li{
+        display:block;
+        margin: 20px 0;
+
+    }
+
+}
+
+
+.hero-section{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    padding: 0 2%;
+    
+}
+.hero-section h1{
+    font-size: 5rem;
+   align-items: center;
+    color: rgb(84, 112, 236);
+    text-decoration: underline var(--pop-color);
+    
+}
+.hero-section h2{
+    font-size: 1.9rem;
+}
+
+@media(max-width: 880px){
+    .hero-section h1{
+        font-size: 4rem;
+    }
+
+}
+section table th, section table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: black;
+    width: 15rem;
+    
+    text-align: start;
+    /* border: black 1px solid; */
+    margin: 3rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: black 0px 5px 15px ;
+
+}
+.card-img img{
+    width: 100%;
+
+}
+.cards p{
+    font-size: 1.2rem;
+}
+.cards h3{
+    font-weight: 700;
+    color:rgb(81, 81, 81);
+}
+.cards-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.event-title{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing:2rem;
+    
+    text-decoration: dotted;
+    padding: 0 2%;
+    text-align: center;
+    font-style:italic;
+}
+#shedule{
+
+    padding: 0.5% 2%;
+}
+#shedule table{
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+}
+#shedule table th{
+    background-color: #dddddd;
+}
+#shedule table th, table td{
+    padding: 8px;
+    border: 1px solid #dddddd
+}
+.regestration{
+    text-align: center;
+    font-size: 40px;
+}
+
+.regestration form label{
+    
+    display: block;
+    margin-bottom: 10px;
+    
+}
+.regestration form input[type="text"],
+ .regestration form input[type="email"]{
+     font-size: 20px;
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.regestration form input[type="submit"] {
+    background-color: #008080;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    margin-top: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #dddddd;
+}
